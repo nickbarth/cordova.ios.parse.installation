@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova.ios.parse.installation" version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>iOSInstall</name>
+  <description>Plugin for iOS to retrieve the Install.</description>
+  <author>Nick Barth</author>
+  <keywords>iOS Install</keywords>
+  <license>MIT</license>
+
+  <!-- JavaScript interface -->
+  <js-module src="www/iOSInstall.js" name="iOSInstall" target="www/iOSInstall.js">
+    <clobbers target="window.iOSInstall" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="plugins">
+      <feature name="iOSInstall">
+        <param name="ios-package" value="iOSInstall"/>
+        <param name="onload" value="true" />
+      </feature>
+      <plugin name="iOSInstall" value="iOSInstall"/>
+    </config-file>
+    <header-file src="src/ios/iOSInstall.h" />
+    <source-file src="src/ios/iOSInstall.m" />
+  </platform>
+</plugin>
