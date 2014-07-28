@@ -9,7 +9,7 @@
 
     PFUser *user = [PFUser currentUser];
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [[PFInstallation currentInstallation] setObject:user.id forKey:@"userId"];
+    [[PFInstallation currentInstallation] setObject:user.objectId forKey:@"userId"];
     [[PFInstallation currentInstallation] saveEventually];
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
