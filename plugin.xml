@@ -7,7 +7,7 @@
   <description>Plugin for iOS to retrieve the Install.</description>
   <author>Nick Barth</author>
   <keywords>iOS Install</keywords>
-  <license>MIT</license>
+  <license>CC0</license>
 
   <!-- JavaScript interface -->
   <js-module src="www/iOSInstall.js" name="iOSInstall" target="www/iOSInstall.js">
